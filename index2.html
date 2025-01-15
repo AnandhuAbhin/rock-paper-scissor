@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock paper scissor</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <div class="main">
+    <div>
+      <div>
+        <p class="title-rock">Rock</p>
+        <p class="title-paper">Paper</p>
+        <p class="title-scissor">Scissor</p>
+      </div>
+      
+      <button onclick="
+        
+        move();
+        playmove('rock');
+        titleChange('rock','paper','scissor');
+        
+        " class="choose-button" >
+        <img src="rock.jpg" alt=""class="move">
+      </button>
+      <button onclick="
+        
+        move();
+        playmove('paper'); 
+        titleChange('paper','rock','scissor');
+        
+        "class="choose-button">
+        <img src="paper.jpg" alt=""class="move">
+      </button >
+      <button onclick="
+        move();
+        playmove('scissor'); 
+        titleChange('scissor','rock','paper');
+        " class="choose-button">
+        <img src="scissor.jpg" alt=""class="move">
+      </button>
+    </div>
+    
+    <div class="result-box">
+      <p class="js-result result" >RESULT</p>
+    </div>
+    <div>
+      <h3 class="js-move"></h3>
+      <p class="js-score"></p>
+    </div>
+    
+    <div>
+      <button onclick="
+        score.wins=0;
+        score.losses=0;
+        score.ties=0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        ">
+      reset score</button>
+      <button onclick="
+        
+      autoPlay();
+    
+    ">AutoPlay</button>
+    </div>
+   
+  </div>
+
+
+
+  
+  
+
+  
+
+
+
+  <script src="script2.js"></script>
+</body>
+</html>
